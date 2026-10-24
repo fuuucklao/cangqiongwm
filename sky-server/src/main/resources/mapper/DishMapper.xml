@@ -16,10 +16,10 @@
                 and d.name like concat("%",#{name},"%")
             </if>
             <if test="categoryId != null">
-                and category_id = #{categoryId}
+                and d.category_id = #{categoryId}
             </if>
             <if test="status != null">
-                and status = #{status}
+                and d.status = #{status}
             </if>
         </where>
         order by create_time desc
